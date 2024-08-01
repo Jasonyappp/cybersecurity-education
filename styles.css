@@ -46,26 +46,7 @@ nav ul li a{
     color:#fff;
 }
 
-button{
-    background: #efefef;
-    height: 30px;
-    width: 60px;
-    border-radius: 20px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    transition: background 0.5s;
-}
 
-button span{
-    display: block;
-    background: #999;
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    margin-left: 2px;
-    transition: background 0.5s, margin-left 0.5s;
-}
 
 .home-img-container{
     position: absolute;
@@ -102,16 +83,6 @@ button span{
     border-radius: 30px;
 }
 
-.active{
-    background: green;
-
-}
-
-.active span{
-    background: #fff;
-    margin-left: 31px;
-
-}
 
 .windowbackground {
     position: absolute;
@@ -125,12 +96,21 @@ button span{
 
 .gc-container {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate(-110%, -50%);
+    top: 20px;
+    left: 20px;
+    width: 68px;
     text-align: center;
     cursor: pointer;
 }
+.gta-container {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    width: 68px;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 .gc-icon {
     width: 50px; 
@@ -142,6 +122,90 @@ button span{
     font-size: 18px;
     color: white; 
     font-family: Arial, sans-serif;
+}
+
+.popup-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.popup-header {
+    padding: 10px;
+    background-color: #00986f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-msg {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-icon {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.game-name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+.download-btn {
+    text-decoration: none;
+    background-color: #00986f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #007a59;
+}
+
+.close-btn {
+    width: 24px; 
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 0; 
+    border: none; 
+    outline: none; 
 }
 
 .taskbar {
@@ -167,4 +231,42 @@ button span{
 .taskbar-icon-img {
     width: 30px; 
     height: 30px; 
+}
+
+.notification-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px; /* Width of the notification bar */
+    height: 60px; /* Adjust height as needed */
+    background-color: #333;
+    color: white;
+    display: none; /* Hidden by default */
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2000; /* Ensure it's on top of the taskbar */
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-out */
+}
+
+.notification-message {
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #555;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0; /* Start with 0 width */
+    transition: width 5s linear; /* Smooth transition */
 }

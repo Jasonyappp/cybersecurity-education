@@ -1,8 +1,4 @@
-var btn = document.getElementById("btn");
 
-function toggleBtn(){
-    btn.classList.toggle("active")
-}
 
 function openApp() {
     document.getElementById('popupWindow').style.display = 'block';
@@ -77,3 +73,58 @@ function addNewApp() {
         openGTA(); // Function to be executed when clicking the new app
     });
 }
+
+function closeGTAPopup() {
+    document.getElementById('popupGTA').style.display = 'none';
+}
+
+function startRandomIcons() {
+    var duration = 10000; // 10 seconds
+    var endTime = Date.now() + duration;
+
+    function createIcon() {
+        if (Date.now() > endTime) {
+            showBlueScr(); // Show the blue screen after 10 seconds
+            return;
+        }
+
+        // Create a new icon element
+        var icon = document.createElement('img');
+        icon.src = 'images/warning.png'; // Path to your icon image
+        icon.className = 'random-icon';
+
+        // Randomly position the icon on the screen
+        icon.style.position = 'absolute';
+        icon.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+        icon.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+
+        // Append the icon to the body
+        document.body.appendChild(icon);
+
+        // Remove the icon after 15 seconds
+        setTimeout(function() {
+            icon.remove();
+        }, duration - (Date.now() - (endTime - duration)));
+
+        // Continue creating icons
+        setTimeout(createIcon, 100); // Faster generation
+    }
+
+    createIcon();
+}
+
+function showBlueScr() {
+    var overlay = document.getElementById('blue-scr');
+    overlay.style.display = 'flex'; // Show the blue screen
+}
+
+function closeBlueScr() {
+    window.location.href = 'index.html'; // Redirect to index.html
+}
+
+document.getElementById('yesBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    closeGTAPopup(); // Close the GTA window
+    startRandomIcons(); // Start generating random icons
+});
+

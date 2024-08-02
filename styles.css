@@ -136,7 +136,6 @@ nav ul li a{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
-
 .popup-header {
     padding: 10px;
     background-color: #00986f;
@@ -145,18 +144,15 @@ nav ul li a{
     justify-content: space-between;
     align-items: center;
 }
-
 .popup-content {
     padding: 20px;
     text-align: center;
 }
-
 .welcome-msg {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
 }
-
 .game-info {
     display: flex;
     flex-direction: column;
@@ -187,6 +183,50 @@ nav ul li a{
     transition: background-color 0.3s;
     cursor: pointer;
 }
+.popup-GTAwindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.popup-GTAheader {
+    padding: 10px;
+    background-color: #00986f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-GTAcontent {
+    padding: 20px;
+    text-align: center;
+}
+
+.warning-msg {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.yes-btn {
+    text-decoration: none;
+    background-color: #00986f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
 
 .download-btn:hover {
     background-color: #007a59;

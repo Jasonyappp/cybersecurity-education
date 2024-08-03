@@ -19,11 +19,6 @@ nav{
     padding: 20px 8%;
 }
 
-nav .menu-img {
-    width: 25px;
-    margin-right: 20px;
-    cursor: pointer;
-}
 
 nav .logo{
     width: 200px;
@@ -345,4 +340,52 @@ nav ul li a{
 
 .back-home-btn:hover {
     background-color: #007a59;
+}
+
+.prevention-container {
+    max-width: 800px;
+    margin: 7% auto;
+    padding: 20px;
+    background-color: #2c2f36;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.prevention-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.prevention-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tip-item img {
+    width: 100%; /* Adjust the size according to your needs */
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tip-item p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #1d2026;
 }

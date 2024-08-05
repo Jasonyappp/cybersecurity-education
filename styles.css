@@ -389,3 +389,60 @@ body {
     flex-direction: column;
     background: #1d2026;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d2026;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00986f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #007a59;
+}
+
+.form-container p {
+    margin-top: 10px;
+}
+
+.form-container a {
+    color: #00986f;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}

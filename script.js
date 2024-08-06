@@ -36,7 +36,7 @@ function showNotification() {
     // Change the message and fade out the notification bar after 5 seconds
     setTimeout(function() {
         notificationMessage.textContent = 'Download Completed'; // Change the message
-        
+        closePopup();
         // Fade out the notification bar
         notificationBar.style.opacity = '0'; // Start fade out
         setTimeout(function() {
